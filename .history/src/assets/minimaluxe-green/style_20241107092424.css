@@ -1,0 +1,817 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Cinzel:wght@400..900&display=swap');
+
+
+:root {
+    --primary-color: #597445;
+    --secondary-color: #658147;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+body.disable-scroll {
+    overflow: hidden;
+}
+
+.card-cover {
+    /* border: 1px white solid; */
+    position: fixed;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('/src/assets/minimaluxe-f/img/foto-2.jpg');
+    background-size: cover;
+    background-position: top center;
+}
+
+.img-cover {
+    width: 12em;
+    border-top-left-radius: 60%;
+    border-top-right-radius: 60%;
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.5);
+}
+
+.card-cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(21, 19, 19, 0.501);
+}
+
+.card-cover>* {
+    position: relative;
+    z-index: 2;
+}
+
+.content-cover {
+    position: relative !important;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 15px !important;
+    box-sizing: border-box;
+    /* justify-content: center !important; */
+    box-shadow: 0 4px 8px rgba(46, 48, 90, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: left; */
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: clip-path 1s ease-in-out;
+    clip-path: inset(0% 0% 0% 0%);
+}
+
+#cover.hide {
+    clip-path: inset(100% 0% 0% 0%);
+}
+
+
+
+
+#invitation-content {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+    background-color: var(--primary-color);
+
+}
+
+#open-invitation {
+    padding: 7px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    /* border: none; */
+    /* border-radius: 5px; */
+}
+
+
+.open-invitation:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: #597445 1px solid;
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.5);
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+
+}
+
+
+.main-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-image: url('/src/assets/minimaluxe-f/img/foto-cover.jpg');
+    background-size: contain;
+    background-position: top center;
+    background-repeat: repeat-y;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(66, 54, 54, 0.1);
+    overflow: hidden;
+}
+
+
+.main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.756);
+    z-index: 1;
+}
+
+.main-container>* {
+    position: relative;
+    z-index: 2;
+}
+
+
+.card-container {
+    width: 100%;
+    text-align: center;
+}
+
+.card-page {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center !important;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+
+}
+
+
+/* Cover */
+
+.img-mempelai {
+    box-sizing: border-box;
+    width: 100%;
+    /* border-top-left-radius: 50%; */
+    /* border-top-right-radius: 50%; */
+    border-radius: 100%;
+    z-index: 3;
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.5);
+}
+
+.cover-text {
+    color: var(--primary-color);
+}
+
+.nickname {
+    font-family: 'Bodoni Moda';
+    font-size: 1.4em;
+    font-style: italic;
+    /* margin-top: 15px; */
+    color: var(--primary-color);
+}
+
+.dan {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Bodoni Moda';
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+.nama-mempelai {
+    font-family: "Bodoni Moda", serif;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 1.4em !important;
+    color: white !important;
+}
+
+
+.nama-mempelai-2 {
+    font-family: 'Bodoni Moda', serif;
+    letter-spacing: 0px;
+    font-weight: bold;
+    font-size: 1.2em !important;
+    color: var(--primary-color) !important;
+}
+
+.text-to {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8em;
+    color: white;
+}
+
+.flower-cover-2 {
+    position: absolute;
+    bottom: 0px !important;
+    left: 0%;
+    transform: translateX(-50%);
+    width: 12em !important;
+}
+
+.nama-tamu {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white !important;
+}
+
+.open-invitation {
+    color: white !important;
+    border: #f8f8f8 1px solid;
+    /* border-radius: 20px !important; */
+    font-size: 0.8em !important;
+}
+
+.invitation {
+    display: none;
+}
+
+
+/* Page Home */
+.card-ayat {
+    color: var(--primary-color) !important;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+
+}
+
+.arti-ayat {
+    font-size: 0.7em;
+    font-family: 'Arial', sans-serif;
+}
+
+.salam {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.text-bride {
+    font-family: 'Bodoni Moda';
+    color: var(--primary-color);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2em;
+}
+
+/*
+.bride-box {
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    margin-top: 10px;
+} */
+
+.card-bride {
+    margin: 20px;
+    padding: 10px;
+    background-color: white !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+
+}
+
+.bride-box p {
+    margin-bottom: 0rem !important;
+    margin-top: 10px;
+}
+
+
+.text-home {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.7em;
+    margin-top: 20px;
+    margin-bottom: 20px !important;
+    color: var(--primary-color);
+}
+
+.card-page-home {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.card-page-home.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bride & Groom */
+.underline-with-icon {
+    display: flex;
+    align-items: center; /* Mengatur ikon dan hr agar sejajar secara vertikal */
+    justify-content: center; /* Agar elemen berada di tengah container */
+}
+
+.icon-love i {
+    color: var(--primary-color); /* Warna ikon love */
+}
+
+.underline-with-icon hr {
+    margin-left: 3px !important;
+    border: none;
+    border-top: 2px solid var(--primary-color); /* Atur warna dan ketebalan garis */
+    width: 90%; /* Atur panjang garis horizontal */
+    margin: 0; /* Hilangkan margin default */
+}
+.bride {
+    box-shadow: 2px 3px 6px 1px var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 100%;
+    /* padding: 10px; */
+    background-color: var(--primary-color);
+}
+
+.bride:hover {
+    transform: scale(1.03);
+}
+
+.bride img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.flower-3 {
+    position: absolute;
+    top: 229px !important;
+    left: 83%;
+    transform: translateX(-50%);
+    width: 130px !important;
+    animation: slideIn 2s ease-out, swing 5s infinite ease-in-out 2s;
+}
+
+.cincin {
+    text-align: center;
+    width: 20% !important;
+}
+
+
+.parents {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8em;
+    color: var(--primary-color);
+}
+
+
+/* Page Date */
+.title-box {
+    border: var(--secondary-color) solid 3px;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+
+
+.text-title-2 {
+    color: var(--primary-color);
+    font-weight: 900;
+    font-family: 'La';
+    align-items: center;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.text-title {
+    color: var(--primary-color);
+    font-weight: 900;
+    font-family: 'La';
+    align-items: center;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.box-date {
+    color: white;
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-date {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+}
+
+.box-text {
+    color: white;
+    font-size: 0.9em;
+    margin-top: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.card-the-date {
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px 0px 20px 0px;
+}
+
+.title-akad {
+    font-family: 'La';
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-align: left;
+}
+
+.akad h6 {
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9em !important;
+}
+
+.akad {
+    text-align: left;
+}
+
+.resepsi h6 {
+    text-align: right;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9em !important;
+}
+
+.resepsi {
+    text-align: right;
+}
+
+.akad-container {
+    display: flex; /* Menggunakan Flexbox untuk kolom */
+    justify-content: space-between; /* Menyusun elemen dengan jarak di antara mereka */
+    align-items: center; /* Vertikal rata tengah */
+}
+
+.akad-title {
+    flex: 1; /* Mengatur ukuran kolom pertama */
+    text-align: center; /* Mengatur agar teks berada di tengah kolom */
+    transform: rotate(-90deg); /* Memutar teks agar vertikal */
+    transform-origin: left center; /* Atur titik rotasi agar sesuai */
+}
+
+.akad-details {
+    flex: 2; /* Mengatur ukuran kolom kedua */
+    padding-left: 20px; /* Menambah jarak antara dua kolom */
+}
+
+.title-akad {
+    font-size: 30px;
+    color: white;
+}
+
+.btn.open-maps {
+    background-color: #007bff; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn.open-maps:hover {
+    background-color: #0056b3; /* Warna hover tombol */
+}
+
+.title-resepsi {
+    font-family: 'La';
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-align: right;
+}
+
+.flower-box {
+    position: absolute;
+    top: -1px !important;
+    right: -20%;
+    transform: translateX(-50%);
+    width: 40% !important;
+    animation: slideInFromLeft 2s ease-out;
+}
+
+.flower-box-2 {
+    position: absolute;
+    bottom: -1px !important;
+    left: 22%;
+    transform: translateX(-50%);
+    width: 45% !important;
+    animation: slideIn 2s ease-out;
+}
+
+.open-maps {
+    background-color: #f8f8f8 !important;
+    color: var(--primary-color) !important;
+    font-size: 0.8em !important;
+    font-weight: bold !important;
+    border-radius: 60px !important;
+    letter-spacing: 1px;
+}
+
+.img-mempelai-3 {
+    /* border: var(--secondary-color) solid 2px; */
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px var(--primary-color);
+
+}
+
+.img-mempelai-4 img {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px !important;
+    box-shadow: 0 4px 8px var(--primary-color);
+}
+
+.img-mempelai-3 img {
+    width: 100%;
+    /* padding: 10px; */
+}
+
+.card-story {
+    background-color: var(--primary-color);
+    margin: 0px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.title-story {
+    color: white;
+    font-family: 'Baliana', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.title-story-2 {
+    color: white;
+    font-family: 'Baliana', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+/* Page Galery */
+.galery {
+    column-count: 2;
+    column-gap: 9px;
+    margin-top: 15px;
+}
+
+.img-container {
+    break-inside: avoid;
+    margin-bottom: 5px;
+}
+
+.img-galery {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.5);
+}
+
+/*  modal pop up foto */
+/* .mfp-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.mfp-img {
+    max-width: 100%;
+    height: auto;
+} */
+
+/* RSVP & Wishes */
+.form-control {
+    font-size: 0.9em !important;
+    color: var(--secondary-color) !important;
+    font-family: 'Arial', sans-serif;
+    height: 45px !important;
+}
+
+.flower-box-7 {
+    position: absolute;
+    bottom: 0px !important;
+    left: 16%;
+    transform: translateX(-50%);
+    width: 35% !important;
+    animation: slideIn 2s ease-out;
+}
+
+.flower-box-6 {
+    position: absolute;
+    top: 0px !important;
+    left: 84%;
+    transform: translateX(-50%);
+    width: 35% !important;
+    animation: slideInFromLeft 2s ease-out;
+}
+
+.your-wish {
+    margin-top: 20px;
+    font-size: 0.8em;
+    font-family: 'Arial', sans-serif;
+    color: var(--primary-color);
+    text-align: left;
+    box-shadow: 3px 3px 16px 2px var(--secondary-color);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 40vh;
+    overflow: auto;
+}
+
+.your-wish:hover {
+    transform: scale(1.02);
+}
+
+/* Page Gift */
+.btn-gift {
+    background-color: var(--primary-color) !important;
+    font-size: 13px !important;
+    font-family: 'Arial', sans-serif !important;
+    color: white !important;
+    border-radius: 20px !important;
+}
+
+/* ATM Card */
+.atm-card {
+    /* background-color: rgba(122, 140, 169, 0.6); */
+    color: var(--primary-color);
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px var(--primary-color);
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+
+.card-title {
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.card-details {
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.card-details p {
+    margin: 5px 0;
+    text-align: left;
+}
+
+.card-details span {
+    font-weight: bold;
+}
+
+.btn-salin {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color) !important;
+    background-color: white !important;
+    border: none;
+    /* margin: 5px; */
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 0.7em;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.toast {
+    position: fixed;
+    bottom: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255);
+    color: var(--primary-color) !important;
+    padding: 10px;
+    font-size: 0.9em;
+    font-weight: bold !important;
+    font-family: 'Arial', sans-serif;
+    border-radius: 8px;
+    opacity: 0;
+    width: 70% !important;
+    transition: opacity 0.5s;
+    z-index: 1000;
+    border: var(--primary-color) !important;
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+/* Footer */
+.card-footer {
+    background-color: rgba(147, 162, 186, 0.8) !important;
+    color: white !important;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1em;
+    box-shadow: 0 4px 8px rgba(46, 48, 90, 0.2);
+
+}
+
+.card-footer i {
+    font-size: 1.4em;
+}
+
+.nama-undangan {
+    font-size: 2em;
+    font-family: 'Baliana', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-container {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .main-container {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .main-container {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+/* animasi masuk dari kanan ke kiri  */
+@keyframes slideIn {
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* animasi masuk dari kiri ke kanan */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
